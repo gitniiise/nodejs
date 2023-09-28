@@ -208,7 +208,7 @@ function generateHighchartsChart(chartType, titleText, seriesData, categoriesDat
   });
 }
 
-// Beispiel für Aufruf
+// Aufruf
 // Frage 1: Wieviel Bestand (in Euro) verwaltet der Berater?
 generateHighchartsChart('area', 'Verwaltung von Bestand in €', fakeBestandData.berater, fakeBestandData.berater.map(dataPoint => dataPoint.name), "Berater");
 

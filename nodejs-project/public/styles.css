@@ -4,9 +4,61 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.chart-container {
-    width: 400px;
-    margin: 10px;
-    float: left;
-    /* Damit die Container nebeneinander fließen */
+section {
+    padding: 3rem 5rem;
+}
+
+.bg-grey {
+    background-color: #e4e5e7;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.chartContainer,
+.selectors {
+    width: calc(50% - 60px);
+    margin-bottom: 20px;
+}
+
+/* Style für die Multi-Select-Boxen */
+select[multiple] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    margin-top: 10px;
+}
+
+/* Style für die Multi-Select-Optionen */
+select[multiple] option {
+    font-size: 16px;
+    padding: 5px;
+}
+
+/* Füge Hover-Effekt hinzu */
+select[multiple]:hover {
+    border-color: #666;
+}
+
+/* Füge Focus-Effekt hinzu */
+select[multiple]:focus {
+    border-color: #333;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+option:checked {
+    background-color: #c9eca7;
+}
+
+option {
+    margin: 5px;
 }

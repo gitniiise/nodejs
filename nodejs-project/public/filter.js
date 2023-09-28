@@ -14,16 +14,11 @@ function updateCharts(selectedDepots, selectedRisiken) {
   const chartContainer = document.getElementById('chartContainers');
 
  chartContainer.innerHTML = '';
-    // Hier kannst du die Highcharts-Diagramme mit den gefilterten Daten aktualisieren
-    // Beispiel: Highcharts.chart('container', { ... });
-    generateHighchartsChart('bar', 'Bestandverteilung der Depositstellen', filteredDepotstellen);
-generateHighchartsChart('line', 'Verteilung der Risikoklassen', filteredRisikoklassen);
-
-
-    // ...
-
-    // Hier kannst du die weiteren Diagramme aktualisieren
-    // Beispiel: Highcharts.chart('container2', { ... });
+    // Highcharts-Diagramme mit den gefilterten Daten aktualisieren
+    generateHighchartsChart('area', 'Verwaltung von Bestand in €', fakeBestandData.berater, fakeBestandData.berater.map(dataPoint => dataPoint.name), "Berater");
+    generateHighchartsChart('bar', 'Bestandverteilung der Depositstellen', filteredDepotstellen, filteredDepotstellen.map(dataPoint => dataPoint.name));
+    generateHighchartsChart('column', 'Bestandverteilung der Produktgeber', produktgeberVerteilung, produktgeberVerteilung.map(dataPoint => dataPoint.name));
+    generateHighchartsChart('pie', 'Verteilung der Risikoklassen', filteredRisikoklassen, filteredRisikoklassen.map(dataPoint => dataPoint.name));
 }
 
 // Funktion zum Erstellen der Optionen für eine Multi-Select-Liste
@@ -63,14 +58,9 @@ function updateChartsBasedOnSelection() {
         console.error('Bitte wählen Sie mindestens eine Depotstelle und eine Risikoklasse aus.');
     }
 
-    alert('Filter angewendet!');
+    console.log('Filter angewendet!');
 }
 
 // Füge Event-Listener hinzu
 depotSelect.addEventListener('change', updateChartsBasedOnSelection);
 risikoSelect.addEventListener('change', updateChartsBasedOnSelection);
-
-const submitButton = document.getElementById('submitButton');
-submitButton.addEventListener('click', () => {
-    updateChartsBasedOnSelection();
-});

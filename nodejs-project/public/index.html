@@ -9,24 +9,28 @@
 </head>
 
 <body>
-    <div>
-        <h2>Filter</h2>
-        <label for="depotSelect">Depotstelle:</label>
-        <select id="depotSelect">
-            <!-- Optionen werden dynamisch von JavaScript generiert -->
-        </select>
-        
-        <label for="risikoSelect">Risikoklasse:</label>
-        <select id="risikoSelect">
-            <!-- Optionen werden dynamisch von JavaScript generiert -->
-        </select>
-        <button id="submitButton">Filter anwenden</button>
-    </div>
+    <section class="bg-grey">
+        <h2>Filter für die Auswertung</h2>
+        <div class="flex">
+            <div class="selectors">
+                <label for="depotSelect">Depotstelle:</label>
+                <select id="depotSelect">
+                    <!-- Optionen werden dynamisch von JavaScript generiert -->
+                </select>
+            </div>
+            <div class="selectors">
+                <label for="risikoSelect">Risikoklasse:</label>
+                <select id="risikoSelect" >
+                    <!-- Optionen werden dynamisch von JavaScript generiert -->
+                </select>
+            </div>
+        </div>
+    </section>
 
-    <div>
-        <h2>Auswertung</h2>
-        <div id="chartContainers" class="chart-container"></div>
-    </div>
+    <section>
+        <h2>Auswertung der Daten</h2>
+        <div id="chartContainers" class="chart-container flex"></div>
+    </section>
         
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="data.js"></script>
