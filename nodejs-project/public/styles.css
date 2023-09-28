@@ -1,0 +1,12 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.chart-container {
+    width: 400px;
+    margin: 10px;
+    float: left;
+    /* Damit die Container nebeneinander fließen */
+}

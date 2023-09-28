@@ -34,6 +34,9 @@ resourceConfigs.forEach((config) => {
   });
 });
 
+
 app.listen(port, () => {
   console.log(`Proxy-Server läuft auf Port ${port}`);
 });
+
+app.use(express.static('public'));
